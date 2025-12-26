@@ -1,0 +1,345 @@
+/**
+ * DASHBOARD COMPONENT STYLES
+ * ==========================
+ * 
+ * Estilos específicos para los componentes del dashboard principal.
+ * Incluye KPIs, gráficos, tarjetas de balance y transacciones.
+ * 
+ * @author Banco Exprés Development Team
+ * @version 1.0.0
+ */
+
+/* Contenedor principal del dashboard */
+.dashboard-container {
+  @apply space-y-6 animate-fade-in;
+}
+
+/* KPI Cards */
+.kpi-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6;
+}
+
+.kpi-card {
+  @apply bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 p-6 transition-all duration-200 hover:shadow-lg hover:-translate-y-1;
+}
+
+.kpi-header {
+  @apply flex items-center justify-between mb-4;
+}
+
+.kpi-icon {
+  @apply w-12 h-12 rounded-lg flex items-center justify-center text-white text-xl;
+}
+
+.kpi-icon-deposits {
+  @apply bg-gradient-to-br from-success-500 to-success-600;
+}
+
+.kpi-icon-withdrawals {
+  @apply bg-gradient-to-br from-danger-500 to-danger-600;
+}
+
+.kpi-icon-transactions {
+  @apply bg-gradient-to-br from-primary-500 to-primary-600;
+}
+
+.kpi-icon-clients {
+  @apply bg-gradient-to-br from-warning-500 to-warning-600;
+}
+
+.kpi-trend {
+  @apply flex items-center gap-1 text-sm font-medium;
+}
+
+.kpi-trend-up {
+  @apply text-success-600 dark:text-success-400;
+}
+
+.kpi-trend-down {
+  @apply text-danger-600 dark:text-danger-400;
+}
+
+.kpi-value {
+  @apply text-2xl font-bold text-gray-900 dark:text-white mb-1;
+}
+
+.kpi-label {
+  @apply text-sm text-gray-500 dark:text-gray-400;
+}
+
+/* Operations Chart */
+.chart-container {
+  @apply bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 p-6;
+}
+
+.chart-header {
+  @apply flex items-center justify-between mb-6;
+}
+
+.chart-title {
+  @apply text-lg font-semibold text-gray-900 dark:text-white;
+}
+
+.chart-controls {
+  @apply flex items-center gap-2;
+}
+
+.chart-button {
+  @apply px-3 py-1 text-sm rounded-lg transition-colors duration-200;
+}
+
+.chart-button-active {
+  @apply bg-primary-500 text-white;
+}
+
+.chart-button-inactive {
+  @apply bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600;
+}
+
+.chart-canvas {
+  @apply w-full h-80;
+}
+
+/* Balance Cards */
+.balance-grid {
+  @apply space-y-4;
+}
+
+.balance-card {
+  @apply bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 p-4 transition-all duration-200 hover:shadow-lg;
+}
+
+.balance-header {
+  @apply flex items-center justify-between mb-3;
+}
+
+.balance-icon {
+  @apply w-10 h-10 rounded-lg flex items-center justify-center text-white;
+}
+
+.balance-icon-main {
+  @apply bg-gradient-to-br from-primary-500 to-primary-600;
+}
+
+.balance-icon-secondary {
+  @apply bg-gradient-to-br from-secondary-500 to-secondary-600;
+}
+
+.balance-icon-transfers {
+  @apply bg-gradient-to-br from-accent-500 to-accent-600;
+}
+
+.balance-icon-credits {
+  @apply bg-gradient-to-br from-success-500 to-success-600;
+}
+
+.balance-title {
+  @apply text-sm font-medium text-gray-600 dark:text-gray-300;
+}
+
+.balance-amount {
+  @apply text-xl font-bold text-gray-900 dark:text-white;
+}
+
+.balance-change {
+  @apply text-xs flex items-center gap-1 mt-1;
+}
+
+/* Recent Transactions */
+.transactions-container {
+  @apply bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-200 dark:border-gray-700;
+}
+
+.transactions-header {
+  @apply flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700;
+}
+
+.transactions-title {
+  @apply text-lg font-semibold text-gray-900 dark:text-white;
+}
+
+.transactions-view-all {
+  @apply text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 text-sm font-medium;
+}
+
+.transactions-table {
+  @apply w-full;
+}
+
+.transactions-thead {
+  @apply bg-gray-50 dark:bg-gray-700;
+}
+
+.transactions-th {
+  @apply px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider;
+}
+
+.transactions-tbody {
+  @apply bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700;
+}
+
+.transactions-tr {
+  @apply hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200;
+}
+
+.transactions-td {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100;
+}
+
+.transaction-type {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.transaction-type-deposit {
+  @apply bg-success-100 text-success-800 dark:bg-success-900 dark:text-success-200;
+}
+
+.transaction-type-withdrawal {
+  @apply bg-danger-100 text-danger-800 dark:bg-danger-900 dark:text-danger-200;
+}
+
+.transaction-type-transfer {
+  @apply bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200;
+}
+
+.transaction-type-payment {
+  @apply bg-warning-100 text-warning-800 dark:bg-warning-900 dark:text-warning-200;
+}
+
+.transaction-status {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.transaction-status-completed {
+  @apply bg-success-100 text-success-800 dark:bg-success-900 dark:text-success-200;
+}
+
+.transaction-status-pending {
+  @apply bg-warning-100 text-warning-800 dark:bg-warning-900 dark:text-warning-200;
+}
+
+/* Quick Actions */
+.quick-actions-container {
+  @apply bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 p-6;
+}
+
+.quick-actions-title {
+  @apply text-lg font-semibold text-gray-900 dark:text-white mb-6;
+}
+
+.quick-actions-grid {
+  @apply space-y-3;
+}
+
+.quick-action-button {
+  @apply w-full flex items-center gap-3 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 text-left;
+}
+
+.quick-action-icon {
+  @apply w-10 h-10 rounded-lg flex items-center justify-center text-white;
+}
+
+.quick-action-icon-deposit {
+  @apply bg-gradient-to-br from-success-500 to-success-600;
+}
+
+.quick-action-icon-withdrawal {
+  @apply bg-gradient-to-br from-danger-500 to-danger-600;
+}
+
+.quick-action-icon-payment {
+  @apply bg-gradient-to-br from-warning-500 to-warning-600;
+}
+
+.quick-action-icon-transfer {
+  @apply bg-gradient-to-br from-primary-500 to-primary-600;
+}
+
+.quick-action-content {
+  @apply flex-1;
+}
+
+.quick-action-title {
+  @apply font-medium text-gray-900 dark:text-white;
+}
+
+.quick-action-description {
+  @apply text-sm text-gray-500 dark:text-gray-400;
+}
+
+/* Animaciones personalizadas */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out;
+}
+
+/* Efectos de hover mejorados */
+.kpi-card:hover .kpi-icon {
+  @apply transform scale-110;
+}
+
+.balance-card:hover .balance-icon {
+  @apply transform scale-110;
+}
+
+.quick-action-button:hover .quick-action-icon {
+  @apply transform scale-110;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .kpi-grid {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .chart-canvas {
+    @apply h-64;
+  }
+  
+  .transactions-th,
+  .transactions-td {
+    @apply px-3 py-2;
+  }
+}
+
+/* Estados de loading */
+.loading-skeleton {
+  @apply animate-pulse bg-gray-200 dark:bg-gray-700 rounded;
+}
+
+.loading-kpi {
+  @apply h-24;
+}
+
+.loading-chart {
+  @apply h-80;
+}
+
+.loading-table-row {
+  @apply h-12;
+}

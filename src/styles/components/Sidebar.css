@@ -1,0 +1,174 @@
+/**
+ * SIDEBAR COMPONENT STYLES
+ * ========================
+ * 
+ * Estilos específicos para el componente Sidebar del dashboard bancario.
+ * Incluye animaciones, transiciones y estados responsive.
+ * 
+ * @author Banco Exprés Development Team
+ * @version 1.0.0
+ */
+
+/* Contenedor principal del sidebar */
+.sidebar-container {
+  @apply fixed top-0 left-0 h-full bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 shadow-lg z-50 transition-all duration-300 flex flex-col;
+}
+
+/* Estados del sidebar */
+.sidebar-collapsed {
+  @apply w-20;
+}
+
+.sidebar-expanded {
+  @apply w-72;
+}
+
+.sidebar-mobile-open {
+  @apply translate-x-0;
+}
+
+.sidebar-mobile-closed {
+  @apply -translate-x-full lg:translate-x-0;
+}
+
+/* Header del sidebar */
+.sidebar-header {
+  @apply p-6 border-b border-gray-200 dark:border-gray-700;
+}
+
+/* Logo container */
+.sidebar-logo {
+  @apply flex items-center gap-3 mb-6;
+}
+
+.sidebar-logo-collapsed {
+  @apply justify-center;
+}
+
+.sidebar-logo-icon {
+  @apply w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-md border border-gray-200 dark:border-gray-600;
+}
+
+.sidebar-logo-text {
+  @apply text-xl font-bold bg-gradient-to-r from-primary-600 to-secondary-500 bg-clip-text text-transparent;
+}
+
+/* Información del usuario */
+.sidebar-user-info {
+  @apply flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg;
+}
+
+.sidebar-user-avatar {
+  @apply w-12 h-12 rounded-full object-cover border-2 border-primary-200 dark:border-primary-600;
+}
+
+.sidebar-user-details {
+  @apply flex-1 min-w-0;
+}
+
+.sidebar-user-name {
+  @apply text-sm font-medium text-gray-900 dark:text-white truncate;
+}
+
+.sidebar-user-role {
+  @apply text-xs text-gray-500 dark:text-gray-400 truncate;
+}
+
+/* Navegación */
+.sidebar-nav {
+  @apply flex-1 p-4 space-y-1;
+}
+
+.sidebar-nav-item {
+  @apply w-full flex items-center gap-3 px-3 py-3 rounded-lg text-left transition-all duration-200;
+}
+
+.sidebar-nav-item-collapsed {
+  @apply justify-center;
+}
+
+.sidebar-nav-item-active {
+  @apply bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400 border-r-2 border-primary-500;
+}
+
+.sidebar-nav-item-inactive {
+  @apply text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-primary-600 dark:hover:text-primary-400;
+}
+
+.sidebar-nav-icon {
+  @apply text-lg;
+}
+
+.sidebar-nav-label {
+  @apply font-medium;
+}
+
+/* Indicador de colapso */
+.sidebar-collapse-indicator {
+  @apply hidden lg:block p-4 border-t border-gray-200 dark:border-gray-700;
+}
+
+.sidebar-collapse-content {
+  @apply flex flex-col items-center space-y-2;
+}
+
+.sidebar-collapse-avatar {
+  @apply w-10 h-10 rounded-full object-cover border-2 border-primary-200 dark:border-primary-600;
+}
+
+.sidebar-status-indicator {
+  @apply w-2 h-2 bg-success-500 rounded-full;
+}
+
+/* Animaciones personalizadas */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.sidebar-slide-in {
+  animation: slideInLeft 0.3s ease-out;
+}
+
+.sidebar-slide-out {
+  animation: slideOutLeft 0.3s ease-out;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 992px) {
+  .sidebar-container {
+    @apply w-72;
+  }
+}
+
+/* Estados de hover mejorados */
+.sidebar-nav-item:hover .sidebar-nav-icon {
+  @apply transform scale-110;
+}
+
+.sidebar-nav-item:hover .sidebar-nav-label {
+  @apply transform translate-x-1;
+}
+
+/* Efectos de focus para accesibilidad */
+.sidebar-nav-item:focus {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+}
+
+/* Transiciones suaves para el tema oscuro */
+.sidebar-container * {
+  @apply transition-colors duration-200;
+}

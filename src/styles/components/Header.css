@@ -1,0 +1,195 @@
+/**
+ * HEADER COMPONENT STYLES
+ * =======================
+ * 
+ * Estilos específicos para el componente Header del dashboard bancario.
+ * Incluye barra de búsqueda, notificaciones, perfil de usuario y controles.
+ * 
+ * @author Banco Exprés Development Team
+ * @version 1.0.0
+ */
+
+/* Contenedor principal del header */
+.header-container {
+  @apply bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 px-4 lg:px-8 py-4;
+}
+
+.header-content {
+  @apply flex items-center justify-between;
+}
+
+/* Sección izquierda */
+.header-left {
+  @apply flex items-center gap-4 flex-1;
+}
+
+/* Botón hamburguesa */
+.header-hamburger {
+  @apply p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500;
+}
+
+.header-hamburger-icon {
+  @apply w-6 h-6 flex flex-col justify-center items-center;
+}
+
+.header-hamburger-line {
+  @apply block h-0.5 w-6 bg-gray-600 dark:bg-gray-300 transition-all duration-300;
+}
+
+.header-hamburger-line-top {
+  @apply rotate-45 translate-y-1;
+}
+
+.header-hamburger-line-middle {
+  @apply opacity-0;
+}
+
+.header-hamburger-line-bottom {
+  @apply -rotate-45 -translate-y-1;
+}
+
+/* Barra de búsqueda */
+.header-search {
+  @apply flex-1 max-w-md;
+}
+
+/* Sección derecha */
+.header-right {
+  @apply flex items-center gap-4;
+}
+
+/* Ubicación */
+.header-location {
+  @apply hidden md:flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300;
+}
+
+.header-location-icon {
+  @apply text-primary-500;
+}
+
+/* Fecha y hora */
+.header-datetime {
+  @apply hidden lg:flex flex-col items-end text-sm text-gray-600 dark:text-gray-300;
+}
+
+.header-date {
+  @apply font-medium;
+}
+
+.header-time {
+  @apply text-xs;
+}
+
+/* Toggle de tema */
+.header-theme-toggle {
+  @apply p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500;
+}
+
+.header-theme-icon {
+  @apply text-lg;
+}
+
+.header-theme-sun {
+  @apply text-yellow-500;
+}
+
+.header-theme-moon {
+  @apply text-gray-600 dark:text-gray-300;
+}
+
+/* Notificaciones */
+.header-notifications {
+  @apply relative;
+}
+
+.header-notifications-button {
+  @apply p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 relative;
+}
+
+.header-notifications-icon {
+  @apply text-lg text-gray-600 dark:text-gray-300;
+}
+
+.header-notifications-badge {
+  @apply absolute -top-1 -right-1 w-5 h-5 bg-danger-500 text-white text-xs rounded-full flex items-center justify-center;
+}
+
+/* Botón de filtros */
+.header-filters {
+  @apply hidden lg:flex items-center gap-2 px-3 py-2 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200;
+}
+
+.header-filters-icon {
+  /* Font Awesome classes no se pueden usar con @apply */
+}
+
+.header-filters-text {
+  @apply text-sm font-medium;
+}
+
+/* Animaciones */
+@keyframes pulse-notification {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.header-notifications-badge {
+  animation: pulse-notification 2s infinite;
+}
+
+/* Estados de hover mejorados */
+.header-hamburger:hover .header-hamburger-line {
+  @apply bg-primary-500;
+}
+
+.header-theme-toggle:hover .header-theme-icon {
+  @apply transform rotate-12;
+}
+
+.header-notifications-button:hover .header-notifications-icon {
+  @apply transform rotate-12;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-container {
+    @apply px-2 py-3;
+  }
+  
+  .header-right {
+    @apply gap-2;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-search {
+    @apply max-w-32;
+  }
+}
+
+/* Transiciones suaves */
+.header-container * {
+  @apply transition-colors duration-200;
+}
+
+/* Estados de focus para accesibilidad */
+.header-hamburger:focus,
+.header-theme-toggle:focus,
+.header-notifications-button:focus,
+.header-filters:focus {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+}
+
+/* Efectos de glassmorphism para el header */
+.header-glass {
+  @apply backdrop-blur-sm bg-white/90 dark:bg-gray-800/90;
+}
+
+/* Sombra dinámica basada en scroll */
+.header-scrolled {
+  @apply shadow-lg;
+}

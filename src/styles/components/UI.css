@@ -1,0 +1,436 @@
+/**
+ * UI COMPONENTS STYLES
+ * ====================
+ * 
+ * Estilos específicos para componentes de interfaz de usuario reutilizables.
+ * Incluye modales, toasts, dropdowns, breadcrumbs y otros elementos UI.
+ * 
+ * @author Banco Exprés Development Team
+ * @version 1.0.0
+ */
+
+/* MODAL COMPONENTS */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-2 xs:p-4 animate-fade-in;
+}
+
+.modal-content {
+  @apply bg-white dark:bg-gray-800 rounded-lg xs:rounded-xl shadow-xl max-w-full xs:max-w-2xl w-full max-h-[95vh] xs:max-h-[90vh] overflow-y-auto animate-slide-up;
+}
+
+.modal-header {
+  @apply flex items-center justify-between p-3 xs:p-4 sm:p-6 border-b border-gray-200 dark:border-gray-700;
+}
+
+.modal-title {
+  @apply text-base xs:text-lg font-semibold text-gray-900 dark:text-white;
+}
+
+.modal-close {
+  @apply p-1.5 xs:p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200;
+}
+
+.modal-body {
+  @apply p-3 xs:p-4 sm:p-6;
+}
+
+.modal-footer {
+  @apply flex items-center justify-end gap-2 xs:gap-3 p-3 xs:p-4 sm:p-6 border-t border-gray-200 dark:border-gray-700;
+}
+
+/* TOAST COMPONENTS */
+.toast-container {
+  @apply fixed top-2 xs:top-4 right-2 xs:right-4 z-50 space-y-2;
+}
+
+.toast {
+  @apply bg-white dark:bg-gray-800 border-l-4 rounded-lg shadow-lg p-3 xs:p-4 min-w-64 xs:min-w-80 max-w-xs xs:max-w-md transform transition-all duration-300 animate-slide-in-right;
+}
+
+.toast-success {
+  @apply border-success-500;
+}
+
+.toast-error {
+  @apply border-danger-500;
+}
+
+.toast-warning {
+  @apply border-warning-500;
+}
+
+.toast-info {
+  @apply border-primary-500;
+}
+
+.toast-header {
+  @apply flex items-center justify-between mb-2;
+}
+
+.toast-title {
+  @apply font-medium text-gray-900 dark:text-white;
+}
+
+.toast-close {
+  @apply text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 cursor-pointer;
+}
+
+.toast-message {
+  @apply text-sm text-gray-600 dark:text-gray-300;
+}
+
+.toast-icon {
+  @apply w-5 h-5 mr-2;
+}
+
+.toast-icon-success {
+  @apply text-success-500;
+}
+
+.toast-icon-error {
+  @apply text-danger-500;
+}
+
+.toast-icon-warning {
+  @apply text-warning-500;
+}
+
+.toast-icon-info {
+  @apply text-primary-500;
+}
+
+/* DROPDOWN COMPONENTS */
+.dropdown-container {
+  @apply relative;
+}
+
+.dropdown-trigger {
+  @apply flex items-center gap-1 xs:gap-2 p-1.5 xs:p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 cursor-pointer;
+}
+
+.dropdown-menu {
+  @apply absolute right-0 mt-2 w-40 xs:w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-1 z-50 animate-fade-in;
+}
+
+.dropdown-item {
+  @apply flex items-center gap-2 xs:gap-3 px-3 xs:px-4 py-2 text-xs xs:text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 cursor-pointer;
+}
+
+.dropdown-divider {
+  @apply border-t border-gray-200 dark:border-gray-700 my-1;
+}
+
+/* BREADCRUMB COMPONENTS */
+.breadcrumb-container {
+  @apply flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-300;
+}
+
+.breadcrumb-item {
+  @apply flex items-center gap-2;
+}
+
+.breadcrumb-link {
+  @apply hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 cursor-pointer;
+}
+
+.breadcrumb-active {
+  @apply text-gray-900 dark:text-white font-medium;
+}
+
+.breadcrumb-separator {
+  @apply text-gray-400 dark:text-gray-500;
+}
+
+/* SEARCH BAR COMPONENTS */
+.search-container {
+  @apply relative;
+}
+
+.search-input {
+  @apply w-full pl-8 xs:pl-10 pr-3 xs:pr-4 py-1.5 xs:py-2 text-sm xs:text-base border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200;
+}
+
+.search-icon {
+  @apply absolute left-2 xs:left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 text-sm xs:text-base;
+}
+
+.search-results {
+  @apply absolute top-full left-0 right-0 mt-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 max-h-48 xs:max-h-60 overflow-y-auto z-50;
+}
+
+.search-result-item {
+  @apply flex items-center gap-2 xs:gap-3 px-3 xs:px-4 py-2 xs:py-3 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 cursor-pointer border-b border-gray-100 dark:border-gray-700 last:border-b-0;
+}
+
+.search-result-avatar {
+  @apply w-6 xs:w-8 h-6 xs:h-8 bg-primary-500 rounded-full flex items-center justify-center text-white text-xs xs:text-sm;
+}
+
+.search-result-content {
+  @apply flex-1 min-w-0;
+}
+
+.search-result-name {
+  @apply font-medium text-gray-900 dark:text-white text-sm xs:text-base truncate;
+}
+
+.search-result-details {
+  @apply text-xs xs:text-sm text-gray-500 dark:text-gray-400 truncate;
+}
+
+.search-no-results {
+  @apply px-3 xs:px-4 py-2 xs:py-3 text-center text-gray-500 dark:text-gray-400 text-xs xs:text-sm;
+}
+
+/* NOTIFICATION PANEL */
+.notification-panel {
+  @apply absolute right-0 mt-2 w-72 xs:w-80 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50 animate-fade-in;
+}
+
+.notification-header {
+  @apply flex items-center justify-between p-3 xs:p-4 border-b border-gray-200 dark:border-gray-700;
+}
+
+.notification-title {
+  @apply font-semibold text-gray-900 dark:text-white text-sm xs:text-base;
+}
+
+.notification-mark-read {
+  @apply text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 text-xs xs:text-sm cursor-pointer;
+}
+
+.notification-list {
+  @apply max-h-64 xs:max-h-80 overflow-y-auto;
+}
+
+.notification-item {
+  @apply flex items-start gap-2 xs:gap-3 p-3 xs:p-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 border-b border-gray-100 dark:border-gray-700 last:border-b-0;
+}
+
+.notification-icon {
+  @apply w-6 xs:w-8 h-6 xs:h-8 rounded-full flex items-center justify-center text-white text-xs xs:text-sm;
+}
+
+.notification-icon-info {
+  @apply bg-primary-500;
+}
+
+.notification-icon-success {
+  @apply bg-success-500;
+}
+
+.notification-icon-warning {
+  @apply bg-warning-500;
+}
+
+.notification-icon-error {
+  @apply bg-danger-500;
+}
+
+.notification-content {
+  @apply flex-1 min-w-0;
+}
+
+.notification-message {
+  @apply text-xs xs:text-sm text-gray-900 dark:text-white font-medium;
+}
+
+.notification-time {
+  @apply text-xs text-gray-500 dark:text-gray-400 mt-1;
+}
+
+.notification-unread {
+  @apply bg-primary-50 dark:bg-primary-900/20;
+}
+
+/* PROFILE DROPDOWN */
+.profile-dropdown {
+  @apply relative;
+}
+
+.profile-trigger {
+  @apply flex items-center gap-1 xs:gap-2 p-1.5 xs:p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 cursor-pointer;
+}
+
+.profile-avatar {
+  @apply w-6 xs:w-8 h-6 xs:h-8 rounded-full object-cover border-2 border-primary-200 dark:border-primary-600;
+}
+
+.profile-avatar-fallback {
+  @apply w-6 xs:w-8 h-6 xs:h-8 bg-primary-500 rounded-full flex items-center justify-center text-white text-xs xs:text-sm;
+}
+
+.profile-menu {
+  @apply absolute right-0 mt-2 w-56 xs:w-64 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-2 z-50 animate-fade-in;
+}
+
+.profile-info {
+  @apply px-3 xs:px-4 py-2 xs:py-3 border-b border-gray-200 dark:border-gray-700;
+}
+
+.profile-name {
+  @apply font-medium text-gray-900 dark:text-white text-sm xs:text-base;
+}
+
+.profile-email {
+  @apply text-xs xs:text-sm text-gray-500 dark:text-gray-400;
+}
+
+.profile-menu-item {
+  @apply flex items-center gap-2 xs:gap-3 px-3 xs:px-4 py-2 text-xs xs:text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 cursor-pointer;
+}
+
+.profile-menu-icon {
+  @apply w-3 xs:w-4 h-3 xs:h-4;
+}
+
+/* LOADING STATES */
+.loading-spinner {
+  @apply animate-spin h-5 w-5 border-2 border-gray-300 border-t-primary-500 rounded-full;
+}
+
+.loading-skeleton {
+  @apply animate-pulse bg-gray-200 dark:bg-gray-700 rounded;
+}
+
+.loading-text {
+  @apply h-4 bg-gray-200 dark:bg-gray-700 rounded;
+}
+
+.loading-avatar {
+  @apply w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-full;
+}
+
+/* FORM COMPONENTS */
+.form-group {
+  @apply space-y-2;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700 dark:text-gray-300;
+}
+
+.form-input {
+  @apply w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200;
+}
+
+.form-select {
+  @apply w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200;
+}
+
+.form-textarea {
+  @apply w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200;
+  resize: vertical;
+}
+
+.form-error {
+  @apply text-danger-600 dark:text-danger-400 text-sm;
+}
+
+.form-help {
+  @apply text-gray-500 dark:text-gray-400 text-sm;
+}
+
+/* BUTTON VARIANTS */
+.btn {
+  @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-primary {
+  @apply bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-500;
+}
+
+.btn-secondary {
+  @apply bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-600 focus:ring-gray-500;
+}
+
+.btn-success {
+  @apply bg-success-500 text-white hover:bg-success-600 focus:ring-success-500;
+}
+
+.btn-danger {
+  @apply bg-danger-500 text-white hover:bg-danger-600 focus:ring-danger-500;
+}
+
+.btn-warning {
+  @apply bg-warning-500 text-white hover:bg-warning-600 focus:ring-warning-500;
+}
+
+.btn-sm {
+  @apply px-3 py-1.5 text-sm;
+}
+
+.btn-lg {
+  @apply px-6 py-3 text-lg;
+}
+
+/* ANIMATIONS */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out;
+}
+
+/* RESPONSIVE UTILITIES */
+@media (max-width: 320px) {
+  .modal-content {
+    @apply max-w-full mx-1 rounded-lg;
+  }
+  
+  .toast {
+    @apply min-w-56 max-w-xs;
+  }
+}
+
+@media (max-width: 640px) {
+  .modal-content {
+    @apply max-w-full mx-2;
+  }
+  
+  .dropdown-menu {
+    @apply w-full;
+  }
+  
+  .notification-panel {
+    @apply w-full max-w-sm;
+  }
+  
+  .profile-menu {
+    @apply w-full max-w-xs;
+  }
+}
+
+/* ACCESSIBILITY IMPROVEMENTS */
+.focus-visible:focus {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+}
+
+.sr-only {
+  @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+}
+
+/* DARK MODE TRANSITIONS */
+* {
+  @apply transition-colors duration-200;
+}

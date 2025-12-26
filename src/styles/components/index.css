@@ -1,0 +1,228 @@
+/**
+ * COMPONENTS STYLES INDEX
+ * =======================
+ * 
+ * Archivo principal que importa todos los estilos de componentes.
+ * Organiza y centraliza todos los estilos CSS específicos de componentes.
+ * 
+ * @author Banco Exprés Development Team
+ * @version 1.0.0
+ */
+
+/* Importar estilos de componentes de layout */
+@import './Sidebar.css';
+@import './Header.css';
+
+/* Importar estilos de componentes de dashboard */
+@import './Dashboard.css';
+
+/* Importar estilos de componentes de autenticación */
+@import './Auth.css';
+
+/* Importar estilos de componentes de UI */
+@import './UI.css';
+
+/**
+ * ESTILOS GLOBALES DE COMPONENTES
+ * ===============================
+ * 
+ * Estilos que se aplican a múltiples componentes o que definen
+ * comportamientos globales del sistema de componentes.
+ */
+
+/* Transiciones globales para todos los componentes */
+.component-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Estados de hover globales */
+.component-hover {
+  @apply hover:shadow-lg hover:-translate-y-1 transition-all duration-200;
+}
+
+/* Estados de focus globales para accesibilidad */
+.component-focus {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+}
+
+/* Contenedores de componentes */
+.component-container {
+  @apply bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-200 dark:border-gray-700;
+}
+
+/* Headers de componentes */
+.component-header {
+  @apply flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700;
+}
+
+.component-title {
+  @apply text-lg font-semibold text-gray-900 dark:text-white;
+}
+
+/* Contenido de componentes */
+.component-content {
+  @apply p-6;
+}
+
+/* Footers de componentes */
+.component-footer {
+  @apply flex items-center justify-end gap-3 p-6 border-t border-gray-200 dark:border-gray-700;
+}
+
+/* Estados de loading para componentes */
+.component-loading {
+  @apply opacity-50 pointer-events-none;
+}
+
+.component-skeleton {
+  @apply animate-pulse bg-gray-200 dark:bg-gray-700 rounded;
+}
+
+/* Estados de error para componentes */
+.component-error {
+  @apply border-danger-500 bg-danger-50 dark:bg-danger-900/20;
+}
+
+/* Estados de éxito para componentes */
+.component-success {
+  @apply border-success-500 bg-success-50 dark:bg-success-900/20;
+}
+
+/* Separadores entre componentes */
+.component-divider {
+  @apply border-t border-gray-200 dark:border-gray-700 my-6;
+}
+
+/* Espaciado entre componentes */
+.component-spacing {
+  @apply space-y-6;
+}
+
+/* Grid de componentes */
+.component-grid {
+  @apply grid gap-6;
+}
+
+.component-grid-1 {
+  @apply grid-cols-1;
+}
+
+.component-grid-2 {
+  @apply grid-cols-1 md:grid-cols-2;
+}
+
+.component-grid-3 {
+  @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+}
+
+.component-grid-4 {
+  @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-4;
+}
+
+/* Responsive utilities para componentes */
+@media (max-width: 640px) {
+  .component-container {
+    @apply rounded-lg;
+  }
+  
+  .component-header,
+  .component-content,
+  .component-footer {
+    @apply p-4;
+  }
+}
+
+/* Animaciones personalizadas para componentes */
+@keyframes component-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes component-slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes component-scale-in {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.component-animate-fade-in {
+  animation: component-fade-in 0.4s ease-out;
+}
+
+.component-animate-slide-in {
+  animation: component-slide-in 0.3s ease-out;
+}
+
+.component-animate-scale-in {
+  animation: component-scale-in 0.2s ease-out;
+}
+
+/* Utilidades de texto para componentes */
+.component-text-primary {
+  @apply text-gray-900 dark:text-white;
+}
+
+.component-text-secondary {
+  @apply text-gray-600 dark:text-gray-200;
+}
+
+.component-text-muted {
+  @apply text-gray-500 dark:text-gray-300;
+}
+
+/* Utilidades de background para componentes */
+.component-bg-primary {
+  @apply bg-white dark:bg-gray-800;
+}
+
+.component-bg-secondary {
+  @apply bg-gray-50 dark:bg-gray-700;
+}
+
+.component-bg-muted {
+  @apply bg-gray-100 dark:bg-gray-600;
+}
+
+/* Correcciones específicas para texto en tema oscuro */
+.dark .text-gray-600 {
+  @apply text-gray-200;
+}
+
+.dark .text-gray-500 {
+  @apply text-gray-300;
+}
+
+.dark .text-gray-700 {
+  @apply text-gray-200;
+}
+
+/* Print styles para componentes */
+@media print {
+  .component-container {
+    @apply shadow-none border border-gray-300;
+  }
+  
+  .component-hover,
+  .component-transition {
+    @apply transform-none transition-none;
+  }
+}
