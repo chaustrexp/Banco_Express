@@ -1,15 +1,17 @@
-# 🏦 Banco Exprés - Dashboard Administrativo
+# 🏦 Banco Exprés - Sistema Bancario Digital
 
 <div align="center">
-  <img src="public/logo-actualizado.png" alt="Banco Exprés Logo" width="120" height="120">
+  <img src="public/img/logo/logo.jpeg" alt="Banco Exprés Logo" width="120" height="120" style="border-radius:16px">
   
-  **Dashboard bancario moderno y responsive para la gestión administrativa del Banco Exprés en Cúcuta, Colombia**
+  **Sistema bancario digital completo con panel administrativo y portal de clientes. Desarrollado para Banco Exprés en Cúcuta, Colombia.**
   
   [![React](https://img.shields.io/badge/React-18.0+-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
+  [![Node.js](https://img.shields.io/badge/Node.js-18.0+-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+  [![MySQL](https://img.shields.io/badge/MySQL-8.0+-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0+-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-  [![Chart.js](https://img.shields.io/badge/Chart.js-4.0+-FF6384?style=for-the-badge&logo=chart.js&logoColor=white)](https://www.chartjs.org/)
+  [![Express](https://img.shields.io/badge/Express-4.0+-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
   
-  [🚀 Demo en Vivo](#) | [📖 Documentación](src/docs/README.md) | [🐛 Reportar Bug](https://github.com/chaustrexp/Banco_Express/issues)
+  [📖 Documentación](src/docs/README.md) | [🐛 Reportar Bug](https://github.com/chaustrexp/Banco_Express/issues)
 </div>
 
 ---
@@ -17,242 +19,310 @@
 ## 📋 Tabla de Contenidos
 
 - [🎯 Características](#-características)
-- [🚀 Inicio Rápido](#-inicio-rápido)
-- [📱 Responsive Design](#-responsive-design)
 - [🏗️ Arquitectura](#️-arquitectura)
-- [📊 Funcionalidades](#-funcionalidades)
-- [🎨 Temas](#-temas)
-- [📚 Documentación](#-documentación)
-- [🤝 Contribuir](#-contribuir)
+- [🚀 Inicio Rápido](#-inicio-rápido)
+- [👤 Roles y Credenciales](#-roles-y-credenciales)
+- [📊 Módulos del Sistema](#-módulos-del-sistema)
+- [🎨 Diseño y UI](#-diseño-y-ui)
 - [📄 Licencia](#-licencia)
 
 ---
 
 ## 🎯 Características
 
-### ✨ **Funcionalidades Principales**
-- 🏦 **Dashboard Bancario Completo** - KPIs, gráficos y métricas en tiempo real
-- 👥 **Gestión de Clientes** - CRUD completo con búsqueda avanzada
-- 💳 **Administración de Cuentas** - Visualización y gestión de cuentas bancarias
-- 💸 **Control de Transacciones** - Historial y procesamiento de operaciones
-- 💰 **Sistema de Créditos** - Gestión de préstamos y líneas de crédito
-- 🧾 **Pagos y Recaudos** - Procesamiento de pagos de servicios
-- 📊 **Reportes Avanzados** - Generación de reportes personalizables
-- ⚙️ **Configuración del Sistema** - Panel de administración completo
+### ✨ **Sistema Fullstack Completo**
+- 🔐 **Autenticación JWT** - Login seguro con roles diferenciados (Admin / Cliente)
+- 🏦 **Panel Administrativo** - Gestión completa de clientes, cuentas y transacciones
+- 👤 **Portal del Cliente** - Dashboard personalizado, transferencias y recargas
+- 📡 **API REST** - Backend en Node.js + Express con MySQL
+- 🔴 **Tiempo Real** - Notificaciones via Socket.io
+- 🌙 **Modo Oscuro/Claro** - Tema persistente en localStorage
+- 📱 **100% Responsive** - Diseño mobile-first
 
-### 🎨 **Experiencia de Usuario**
-- 📱 **100% Responsive** - Perfecto en móviles, tablets y escritorio
-- 🌙 **Tema Claro/Oscuro** - Cambio dinámico con persistencia
-- 🔍 **Búsqueda Inteligente** - Resultados en tiempo real
-- 🎛️ **Filtros Avanzados** - 8 tipos de filtros personalizables
-- 🔔 **Sistema de Notificaciones** - Alertas y actualizaciones en tiempo real
-- ⚡ **Performance Optimizado** - Carga rápida y navegación fluida
-
----
-
-## 🚀 Inicio Rápido
-
-### 📋 **Prerrequisitos**
-- Node.js 16.0 o superior
-- npm 8.0 o superior
-- Git
-
-### 🛠️ **Instalación**
-
-1. **Clonar el repositorio**
-   ```bash
-   git clone https://github.com/chaustrexp/Banco_Express.git
-   cd Banco_Express
-   ```
-
-2. **Instalar dependencias**
-   ```bash
-   npm install
-   ```
-
-3. **Iniciar el servidor de desarrollo**
-   ```bash
-   npm start
-   ```
-
-4. **Abrir en el navegador**
-   ```
-   http://localhost:3000
-   ```
-
-### 🏗️ **Scripts Disponibles**
-
-```bash
-npm start          # Servidor de desarrollo
-npm run build      # Build de producción
-npm test           # Ejecutar tests
-npm run eject      # Exponer configuración (no recomendado)
-```
-
----
-
-## 📱 Responsive Design
-
-### 📐 **Breakpoints Soportados**
-- **xs (320px+):** Teléfonos extra pequeños
-- **sm (640px+):** Teléfonos pequeños y grandes
-- **md (768px+):** Tablets (vertical)
-- **lg (1024px+):** Tablets (horizontal) y laptops
-- **xl (1280px+):** Escritorios
-- **2xl (1536px+):** Escritorios grandes
-
-### 📱 **Características Responsive**
-- ✅ Navegación adaptativa con sidebar colapsible
-- ✅ Grid de KPIs que se adapta (1→2→4 columnas)
-- ✅ Modales optimizados para móvil
-- ✅ Controles táctiles amigables (44px mínimo)
-- ✅ Tipografía escalable
-- ✅ Imágenes y gráficos responsivos
+### 🎨 **Experiencia de Usuario Premium**
+- ✨ Glassmorphism en la pantalla de login/registro
+- 🎨 Branding personalizado con colores del logo institucional
+- 📸 Fotos de perfil dinámicas según rol y género
+- 🔔 Sistema de notificaciones en tiempo real
+- ⚡ Navegación fluida sin recargas de página
 
 ---
 
 ## 🏗️ Arquitectura
 
 ### 📁 **Estructura del Proyecto**
+
 ```
-src/
-├── components/           # Componentes React
-│   ├── Layout/          # Header, Sidebar, etc.
-│   ├── Dashboard/       # KPIs, Charts, etc.
-│   ├── Auth/           # Autenticación
-│   ├── UI/             # Componentes reutilizables
-│   ├── Clients/        # Gestión de clientes
-│   ├── Accounts/       # Gestión de cuentas
-│   ├── Transactions/   # Gestión de transacciones
-│   ├── Credits/        # Sistema de créditos
-│   ├── Payments/       # Pagos y recaudos
-│   ├── Reports/        # Sistema de reportes
-│   └── Configuration/  # Configuración
-├── context/            # Context API (Estado global)
-├── styles/            # Estilos CSS organizados
-│   └── components/    # Estilos por componente
-├── docs/              # Documentación del proyecto
-└── public/            # Assets estáticos
+Banco_Express/
+├── backend/                    # API REST - Node.js + Express
+│   ├── config/
+│   │   └── db.js              # Conexión MySQL
+│   ├── controllers/           # Lógica de negocio
+│   │   ├── authController.js
+│   │   ├── clientsController.js
+│   │   ├── accountsController.js
+│   │   ├── transactionsController.js
+│   │   ├── creditsController.js
+│   │   ├── reportsController.js
+│   │   └── dashboardController.js
+│   ├── routes/                # Endpoints de la API
+│   ├── middlewares/           # JWT auth, roles
+│   ├── services/              # Servicio de auditoría
+│   ├── database/
+│   │   └── init.sql           # Script de la base de datos
+│   ├── server.js              # Punto de entrada del backend
+│   └── .env                   # Variables de entorno (no incluido en Git)
+│
+├── src/                       # Frontend - React 18
+│   ├── components/
+│   │   ├── Auth/              # Login y Registro (Glassmorphism)
+│   │   ├── Layout/            # Header y Sidebar con logo
+│   │   ├── Dashboard/         # KPIs, gráficos, transacciones recientes
+│   │   ├── Customer/          # Portal del cliente
+│   │   │   ├── CustomerDashboard.js
+│   │   │   ├── CustomerAccounts.js
+│   │   │   ├── CustomerTransfers.js
+│   │   │   └── CustomerRecharge.js
+│   │   ├── Clients/           # Gestión de clientes (Admin)
+│   │   ├── Accounts/          # Gestión de cuentas (Admin)
+│   │   ├── Transactions/      # Historial transaccional (Admin)
+│   │   ├── Credits/           # Sistema de créditos
+│   │   ├── Payments/          # Pagos y servicios
+│   │   ├── Reports/           # Reportes avanzados
+│   │   ├── Admin/             # Auditoría del sistema
+│   │   ├── Configuration/     # Configuración
+│   │   └── UI/                # Componentes reutilizables
+│   ├── context/
+│   │   ├── AuthContext.js     # Estado global de autenticación
+│   │   └── BankContext.js     # Estado global del banco
+│   ├── utils/
+│   │   ├── api.js             # Wrapper fetch con JWT automático
+│   │   └── avatarHelper.js    # Fotos de perfil por rol/género
+│   └── docs/                  # Documentación de componentes
+│
+├── public/
+│   ├── img/
+│   │   ├── logo/              # Logo institucional
+│   │   ├── foto de perfil/    # Avatares por rol y género
+│   │   └── fondo/             # Fondo de pantalla de login
+│   └── index.html
+│
+├── tailwind.config.js         # Paleta de colores personalizada
+└── .env                       # Variables de entorno frontend
 ```
 
-### 🔧 **Tecnologías Utilizadas**
-- **Frontend:** React 18, Tailwind CSS, Chart.js
-- **Estado:** Context API, React Hooks
-- **Iconos:** Font Awesome
-- **Build:** Create React App, Webpack
-- **Linting:** ESLint, Prettier
+### 🔧 **Stack Tecnológico**
+
+| Capa | Tecnología |
+|---|---|
+| Frontend | React 18, Tailwind CSS, Chart.js |
+| Backend | Node.js, Express.js |
+| Base de Datos | MySQL 8.0 |
+| Autenticación | JWT (jsonwebtoken), bcrypt |
+| Tiempo Real | Socket.io |
+| Iconos | Font Awesome 6 |
+| Fuentes | Google Fonts (Inter) |
 
 ---
 
-## 📊 Funcionalidades
+## 🚀 Inicio Rápido
 
-### 🏠 **Dashboard Principal**
-- 📈 KPIs bancarios en tiempo real
-- 📊 Gráfico de operaciones mensuales
-- 💳 Tarjetas de balance con gradientes
-- 📋 Transacciones recientes
-- ⚡ Acciones rápidas
+### 📋 **Prerrequisitos**
+- Node.js 18.0 o superior
+- MySQL 8.0 o superior
+- Git
 
-### 👥 **Gestión de Clientes**
-- 🔍 Búsqueda avanzada de clientes
-- 📝 CRUD completo de información
-- 🏷️ Categorización por tipo (VIP, Activo, etc.)
-- 📊 Historial de transacciones por cliente
+### 🛠️ **Instalación Paso a Paso**
 
-### 💳 **Administración de Cuentas**
-- 👀 Visualización de todas las cuentas
-- 💰 Balances y estados en tiempo real
-- 🔒 Control de estados (Activa, Bloqueada, etc.)
-- 📈 Historial de movimientos
+#### 1. Clonar el repositorio
+```bash
+git clone https://github.com/chaustrexp/Banco_Express.git
+cd Banco_Express
+```
 
-### 💸 **Control de Transacciones**
-- 📋 Listado completo de operaciones
-- 🔍 Filtros por tipo, fecha, monto, estado
-- ✅ Procesamiento y confirmación
-- 📊 Estadísticas de transacciones
+#### 2. Configurar la Base de Datos
+```bash
+# Importar el esquema en MySQL
+mysql -u root -p < backend/database/init.sql
+```
+
+#### 3. Configurar el Backend
+```bash
+cd backend
+```
+
+Crear el archivo `backend/.env`:
+```env
+PORT=5001
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=tu_contraseña
+DB_NAME=banco_express
+JWT_SECRET=tu_secreto_jwt
+```
+
+```bash
+npm install
+npm run dev   # Inicia en http://localhost:5001
+```
+
+#### 4. Configurar el Frontend
+```bash
+# Desde la raíz del proyecto
+npm install
+npm start     # Inicia en http://localhost:3000
+```
 
 ---
 
-## 🎨 Temas
+## 👤 Roles y Credenciales
 
-### 🌞 **Tema Claro**
-- Colores institucionales del banco
-- Alta legibilidad y contraste
-- Diseño profesional y limpio
+El sistema maneja **dos roles** con vistas completamente diferentes:
 
-### 🌙 **Tema Oscuro**
-- Reducción de fatiga visual
-- Mejor para uso nocturno
-- Colores optimizados para pantallas
+### 🔴 Administrador
+| Campo | Valor |
+|---|---|
+| Email | `admin@bancoexpres.com` |
+| Contraseña | `admin123` |
+| Acceso | Panel completo de gestión |
 
-### ⚙️ **Configuración**
-- Toggle en el header para cambio rápido
-- Persistencia en localStorage
-- Transiciones suaves entre temas
+**Módulos disponibles:** Dashboard, Clientes, Cuentas, Transacciones, Créditos, Pagos, Reportes, Auditoría, Configuración.
+
+### 🔵 Cliente
+| Campo | Valor |
+|---|---|
+| Email | Tu correo registrado |
+| Contraseña | Tu contraseña |
+| Acceso | Portal personalizado |
+
+**Módulos disponibles:** Mi Resumen, Mis Cuentas, Transferencias, Recargar Cuenta, Pagar Servicios.
+
+> 💡 Los clientes pueden registrarse directamente desde la pantalla de login. El sistema crea automáticamente su cuenta bancaria al registrarse.
 
 ---
 
-## 📚 Documentación
+## 📊 Módulos del Sistema
 
-### 📖 **Documentación Disponible**
-- [📋 Guía General](src/docs/README.md)
-- [🏗️ Componentes de Layout](src/docs/components/Layout.md)
-- [📊 Componentes de Dashboard](src/docs/components/Dashboard.md)
-- [🎨 Componentes de UI](src/docs/components/UI.md)
-- [🔐 Sistema de Autenticación](src/docs/components/Auth.md)
-- [📑 Secciones Funcionales](src/docs/components/Sections.md)
+### 🔐 Autenticación
+- Login y registro con diseño glassmorphism
+- Detección automática de rol al iniciar sesión
+- Token JWT con expiración de 24 horas
+- Foto de perfil dinámica según rol y género
 
-### 📝 **Reportes de Desarrollo**
-- [✅ Estado Final del Proyecto](FINAL_STATUS_REPORT.md)
-- [📱 Optimización Responsive](RESPONSIVE_OPTIMIZATION_COMPLETE.md)
-- [📚 Estructura de Documentación](DOCUMENTATION_STRUCTURE_COMPLETE.md)
-- [🚀 Características Implementadas](FEATURES_IMPLEMENTED.md)
+### 🏠 Dashboard Administrativo
+- KPIs bancarios (clientes, transacciones, balance total)
+- Gráfico de operaciones mensuales (Chart.js)
+- Transacciones recientes en tiempo real
+- Acciones rápidas de operación
+
+### 👥 Gestión de Clientes
+- CRUD completo (crear, editar, eliminar)
+- Búsqueda por nombre, cédula o email
+- Estado del cliente (Activo, VIP, Inactivo)
+- Creación automática de cuenta al registrar cliente
+
+### 💳 Cuentas Bancarias
+- Visualización de todas las cuentas
+- Saldos en tiempo real desde la base de datos
+- Control de estado (Activa / Bloqueada)
+- Apertura de nuevas cuentas
+
+### 💸 Transacciones
+- Historial completo de operaciones
+- Filtros por tipo, fecha, monto y estado
+- Depósitos, retiros y transferencias
+
+### 👤 Portal del Cliente
+- Resumen de saldo y cuentas personales
+- Transferencias entre cuentas
+- Recarga de saldo en efectivo
+- Historial de movimientos
+
+### 📊 Reportes
+- Generación de reportes personalizables
+- Filtros por rango de fecha
+- Exportación de datos
+
+### 🔍 Auditoría
+- Registro automático de todas las acciones del sistema
+- Trazabilidad completa por usuario
+
+---
+
+## 🎨 Diseño y UI
+
+### 🎨 Paleta de Colores Institucional
+Los colores del sistema están basados en el logo de Banco Exprés:
+- **Primario (Azul):** `#1B4FBF` y variantes
+- **Secundario (Verde):** `#10B981` y variantes
+
+### 📸 Fotos de Perfil Dinámicas
+El sistema selecciona automáticamente la foto de perfil correcta:
+- 👨 **Cliente Hombre** → foto de perfil rol cliente version hombre
+- 👩 **Cliente Mujer** → foto de perfil rol cliente version mujer
+- 👔 **Administrador** → foto de perfil rol admin
+
+### 🌙 Modo Oscuro
+Disponible en todas las vistas, con toggle en el header superior. La preferencia se guarda automáticamente.
+
+---
+
+## 📡 API Endpoints
+
+### Autenticación
+```
+POST   /api/auth/login          # Iniciar sesión
+POST   /api/auth/register       # Registrar usuario
+POST   /api/auth/change-password # Cambiar contraseña
+```
+
+### Clientes (requiere admin)
+```
+GET    /api/clients             # Listar todos
+GET    /api/clients/email/:email # Buscar por email
+POST   /api/clients             # Crear cliente
+PUT    /api/clients/:cedula     # Actualizar
+DELETE /api/clients/:cedula     # Eliminar
+```
+
+### Cuentas
+```
+GET    /api/accounts            # Listar todas (admin)
+GET    /api/accounts/client/:id # Cuentas del cliente
+POST   /api/accounts            # Crear cuenta (admin)
+PUT    /api/accounts/:id/status # Cambiar estado
+```
+
+### Transacciones
+```
+GET    /api/transactions        # Listar todas (admin)
+GET    /api/transactions/client/:id # Del cliente
+POST   /api/transactions        # Crear transacción
+```
 
 ---
 
 ## 🤝 Contribuir
 
-### 🛠️ **Cómo Contribuir**
 1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
+2. Crea tu rama: `git checkout -b feature/NuevaFuncionalidad`
+3. Commit: `git commit -m 'feat: agrega nueva funcionalidad'`
+4. Push: `git push origin feature/NuevaFuncionalidad`
 5. Abre un Pull Request
-
-### 📋 **Guías de Contribución**
-- Sigue las convenciones de código establecidas
-- Documenta nuevas funcionalidades
-- Incluye tests para nuevas características
-- Mantén el diseño responsive
 
 ---
 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
-
----
-
-## 👨‍💻 Desarrollado por
-
-**Banco Exprés Development Team**
-- 🏢 **Institución:** Banco Exprés
-- 📍 **Ubicación:** Cúcuta, Norte de Santander, Colombia
-- 📧 **Contacto:** desarrollo@bancoexpres.com
-
----
-
-## 🙏 Agradecimientos
-
-- React Team por el excelente framework
-- Tailwind CSS por el sistema de diseño
-- Chart.js por los gráficos interactivos
-- Font Awesome por la iconografía
-- La comunidad open source
+Este proyecto está bajo la Licencia MIT. Ver [LICENSE](LICENSE) para más detalles.
 
 ---
 
 <div align="center">
-  <p><strong>🏦 Banco Exprés - Innovación en Servicios Bancarios</strong></p>
-  <p>Hecho con ❤️ en Cúcuta, Colombia</p>
+  <p><strong>🏦 Banco Exprés - Innovación en Servicios Bancarios Digitales</strong></p>
+  <p>Hecho con ❤️ en Cúcuta, Norte de Santander, Colombia</p>
+  <p>
+    <a href="https://github.com/chaustrexp/Banco_Express">⭐ Dale una estrella al repo</a> •
+    <a href="https://github.com/chaustrexp/Banco_Express/issues">🐛 Reportar un bug</a>
+  </p>
 </div>
